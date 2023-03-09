@@ -1,0 +1,179 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Mengatur Navbar */
+  nav {
+    background-color: #537FE7;
+    height: 80px;
+    position: fixed;
+    z-index: 999; /* menambahkan z-index agar navbar selalu tampil di atas konten */
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.904);
+  }
+   /* Mengatur tulisan di logo Navbar */
+  .logo {
+    float: left;
+    margin-left: 20px;
+    line-height: 80px;
+  }
+  
+  .logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+ /* Mengatur foto Navbar */
+  .logo-nav {
+    width: 60px;
+    float: left;
+    line-height: 80px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+   /* Mengatur tulisan dimenu Navbar */
+  .menu {
+    float: right;
+    margin-right: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .menu li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  
+  .menu li a:hover {
+    background-color: #03001C;
+    color: #fff;
+  }
+  /* Mengatur heading */
+
+  .heading {
+    background-color: #537FE7;
+    margin-top: 100px;
+    height: 200px;
+    border: 20px solid white;
+    display: flex;
+    align-items: center;
+  }
+   /* Mengatur logo Heading */
+  .logo-heading {
+    width: 150px;
+    height: auto;
+    margin-left: 25px;
+    border-radius: 50%;
+  }
+  /* Mengatur tulisan Heading */
+  .h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  .h1 h2 {
+    margin: 0;
+  }
+/* Mengatur button Heading */
+  .button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .kontak, .resume {
+    background-color: #03001C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .kontak:hover , .resume:hover {
+    background-color: #fff; /* warna latar belakang yang diinginkan saat dihover */
+    color: #03001C; /* warna teks yang diinginkan saat dihover */
+    cursor: pointer; /* menambahkan tampilan kursor pointer saat dihover */
+  }
+/* Mengatur data Heading */
+  .biodata {
+   color: #fff;
+   margin-left: 100px;
+   display: block;
+   font-size: 20px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+   margin-bottom: 30px;
+  }
+
+  .biodata-isi {
+   color: #fff;
+   display: block;
+   font-size: 20px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+   margin-bottom: 30px;
+  }
+
+   /* Mengatur Form */
+   .form {
+    max-width: 1250px; /* mengatur panjang kotak pada form*/
+    margin: 0 auto;
+  }
+  
+  .label, input, textarea {
+    display: block;
+    margin-bottom: 10px; /* mengatur jarak bawah kotak pada form*/
+  }
+  
+  .input, textarea {
+    padding: 10px; /* mengatur ukuran kotak pada form*/
+    border: 1px solid #ccc; /* mengatur border kotak pada form*/
+    border-radius: 4px; /* mengatur siku kotak pada form*/
+    width: 100%; /* mengatur panjang kotak pada form*/
+    box-sizing: border-box;
+  }
+  
+  .button-form {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 1250px;
+    font-size: 20px;
+  }
+  
+  .button-form:hover {
+    background-color: #3e8e41;
+  }
+
+  .form {
+    display: none;
+  }
+  
+  .form.hidden {
+    display: block;
+  }
+  
+  

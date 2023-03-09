@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+     <!-- Navbar -->
+    <nav>
+        <div class="logo">
+          <img src="hacktiv.jpg" alt="Italian Trulli" class = "logo-nav">
+          <a href="#">Hacktiv8</a>
+        </div>
+        <ul class="menu">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">PRODUCT</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">IVENTORY</a></li>
+        </ul>
+      </nav>
+      <!-- Tutup Navbar -->
+
+       <!-- Heading -->
+       <div class="heading">
+        <img src="foto.jpeg" alt="Italian Trulli" class = "logo-heading">
+        <div class = "h1" >
+            <h2 id="nama">Rivaldi Alwi</h2>
+            <br>
+            <h2 id="role">Front End Developer</h2>
+            <br>
+
+            <div class = "button" >
+              <button class="kontak" onclick="editBiodata()"  id="edit-biodata-btn">Edit</button>
+                <br>
+                <button class="resume" onclick="editBiodata()">Resume</button>
+            </div>
+        </div>
+
+        <div class = "biodata" >
+                <pre>Availability   : </pre>
+                <pre>Hobi           : </pre>
+                <pre>Alamat         : </pre>
+                <pre>Email          : </pre>
+            </div>
+
+            <div class = "biodata-isi" >
+              <pre id="availability">Part Time</pre>
+              <pre id="hobi">Nonton Film</pre>
+              <pre id="alamat">Jakarta Timur</pre>
+              <pre id="email">rivaldialwi42@gmail.com</pre>
+          </div>
+
+      </div>
+       <!-- Tutup Heading -->
+
+    <!-- Form -->
+    <div class = "form">
+        <form>
+            <div>
+              <label for="nama" class = "label" id="nama-label">Nama:</label>
+              <input type="text" class = "input" name="nama" id="nama-input" required>
+            </div>
+            <div>
+                <label for="role" class = "label" id="role-label">Role:</label>
+                <input type="text" class = "input" name="role" id="role-input" required>
+              </div>
+              <div>
+                <label for="availability" class = "label" id="availability-label">Availability:</label>
+                <input type="text" class = "input" name="availability" id="availability-input" required>
+              </div>
+              <div>
+                <label for="hobi" class = "label" id="hobi-label">Hobi:</label>
+                <input type="text" class = "input" name="hobi" id="hobi-input" required>
+              </div>
+              <div>
+                <label for="alamat" class = "label" id="alamat-label">Alamat:</label>
+                <input type="text" class = "input" name="alamat" id="alamat-input" required>
+            <div>
+              <label for="email" class = "label" id="email-label">Email:</label>
+              <input type="email" class = "input" name="email" required>
+            </div>
+            <div>
+              <button type="submit" class="button-form" id="simpan-btn">Submit</button>
+            </div>
+          </form>
+    </div>
+     <!-- Tutup Form -->
+ 
+</body>
+
+<script src="main.js"></script>
+
+</html>
