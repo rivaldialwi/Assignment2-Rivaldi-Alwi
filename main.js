@@ -1,4 +1,4 @@
-   // Memunculkan form saat button edit di klik
+// Memunculkan form saat button edit di klik
 const editBiodataBtn = document.getElementById('edit-biodata-btn');
 const biodataForm = document.querySelector('.form');
 
@@ -67,3 +67,26 @@ form.addEventListener('submit', (event) => {
     // Ubah kembali teks pada button submit
     submitButton.textContent = 'Simpan';
 });
+
+// Menampilkan data pada form saat halaman dimuat
+window.addEventListener('DOMContentLoaded', () => {
+    namaInput.value = namaTeks.textContent;
+    roleInput.value = roleTeks.textContent;
+    availabilityInput.value = availabilityTeks.textContent;
+    hobiInput.value = hobiTeks.textContent;
+    alamatInput.value = alamatTeks.textContent;
+    emailInput.value = emailTeks.textContent;
+});
+
+// Mengubah kondisi saat button edit diklik
+editBiodataBtn.addEventListener('click', () => {
+    form.style.display = 'block';
+    biodataHeading.style.display = 'none';
+    submitButton.textContent = 'Update';
+});
+
+// Mengubah kondisi saat button cancel diklik
+cancelButton.addEventListener('click', () => {
+    form.style.display = 'none';
+    biodataHeading.style.display = 'block';
+})
