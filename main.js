@@ -1,12 +1,35 @@
-// Memunculkan form saat button edit di klik
+//Untuk menyembunyikan form saat web baru di buka
+let forms = document.querySelectorAll('.form');
+for (let i = 0; i < forms.length; i++) {
+  forms[i].style.display = 'none';
+}
 
-const editBiodataBtn = document.getElementById('edit-biodata-btn');
+// Membuat variabel global untuk memunculkan form saat button edit di klik
+const editBiodataBtn = document.querySelector('#edit-biodata-btn');
+const cancelBiodataBtn = document.querySelector('#cancel-biodata-btn');
 const biodataForm = document.querySelector('.form');
 
+// untuk memunculkan form saat button edit di klik
 editBiodataBtn.addEventListener('click', function() {
-    // Ubah kondisi menjadi selalu memunculkan form
-    biodataForm.style.display = 'block';
+biodataForm.style.display = 'block';
 });
+
+// Membuat variabel global untuk mengambil data heading untuk di tampilkan di form dari id html yang di buat
+const form = document.querySelector('form');
+const namaInput = document.querySelector('#nama-input');
+const roleInput = document.querySelector('#role-input');
+const availabilityInput = document.querySelector('#availability-input');
+const hobiInput = document.querySelector('#hobi-input');
+const alamatInput = document.querySelector('#alamat-input');
+const emailInput = document.querySelector('#email-input');
+
+// Membuat variabel global untuk mengambil data pada heading dari id html yang di buat
+const namaTeks = document.querySelector('#nama');
+const roleTeks = document.querySelector('#role');
+const availabilityTeks = document.querySelector('#availability');
+const hobiTeks = document.querySelector('#hobi');
+const alamatTeks = document.querySelector('#alamat');
+const emailTeks = document.querySelector('#email');
 
 // Memunculkan data pada heading ke dalam form saat button edit di klik
 function editBiodata() {
@@ -16,37 +39,13 @@ function editBiodata() {
     hobiInput.value = hobiTeks.textContent;
     alamatInput.value = alamatTeks.textContent;
     emailInput.value = emailTeks.textContent;
-
-    // Change form submit button text
-    submitButton.textContent = 'Update';
-
-    // Show form and hide biodata heading
-    form.style.display = 'block';
-    biodataHeading.style.display = 'none';
 }
 
-// Mengambil elemen form dan input
-const form = document.querySelector('form');
-const namaInput = document.querySelector('#nama-input');
-const roleInput = document.querySelector('#role-input');
-const availabilityInput = document.querySelector('#availability-input');
-const hobiInput = document.querySelector('#hobi-input');
-const alamatInput = document.querySelector('#alamat-input');
-const emailInput = document.querySelector('input[type="email"]');
-
-// Mengambil elemen teks yang akan diganti
-const namaTeks = document.querySelector('#nama');
-const roleTeks = document.querySelector('#role');
-const availabilityTeks = document.querySelector('#availability');
-const hobiTeks = document.querySelector('#hobi');
-const alamatTeks = document.querySelector('#alamat');
-const emailTeks = document.querySelector('#email');
-
-// Event listener untuk form submit
+// Event listener untuk mengaktifkan button submit
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // mencegah halaman direfresh saat form disubmit
 
-    // Mengganti teks dengan nilai input dari form
+    // Merubah data heading sesuai inputan yg di masukan di form
     namaTeks.textContent = namaInput.value;
     roleTeks.textContent = roleInput.value;
     availabilityTeks.textContent = availabilityInput.value;
@@ -65,29 +64,16 @@ form.addEventListener('submit', (event) => {
     // Sembunyikan form setelah di-submit
     form.style.display = 'none';
     biodataHeading.style.display = 'block';
-    // Ubah kembali teks pada button submit
-    submitButton.textContent = 'Simpan';
 });
 
-// Menampilkan data pada form saat halaman dimuat
-window.addEventListener('DOMContentLoaded', () => {
-    namaInput.value = namaTeks.textContent;
-    roleInput.value = roleTeks.textContent;
-    availabilityInput.value = availabilityTeks.textContent;
-    hobiInput.value = hobiTeks.textContent;
-    alamatInput.value = alamatTeks.textContent;
-    emailInput.value = emailTeks.textContent;
-});
-
-// Mengubah kondisi saat button edit diklik
+// Mengubah kondisi agar button edit dapat mengeditan berkali kali
 editBiodataBtn.addEventListener('click', () => {
     form.style.display = 'block';
     biodataHeading.style.display = 'none';
-    submitButton.textContent = 'Update';
 });
 
-// Mengubah kondisi saat button cancel diklik
-cancelButton.addEventListener('click', () => {
+// Untuk cancel edit data 
+cancelBiodataBtn.addEventListener('click', () => {
     form.style.display = 'none';
     biodataHeading.style.display = 'block';
 })

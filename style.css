@@ -167,11 +167,3 @@
   .button-form:hover {
     background-color: #3e8e41;
   }
-
-  .form {
-    display: none;
-  }
-  
-  .form.hidden {
-    display: block;
-  }
